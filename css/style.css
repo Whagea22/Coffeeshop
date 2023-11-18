@@ -1,19 +1,14 @@
 :root {
     --primary: #b6895b;
     --bg: #010101;
-
 }
 
 * {
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     outline: none;
-    
     border: none;
-    
     text-decoration: none;
 }
 
@@ -24,6 +19,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
+    
 }
 
 /* Navbar */
@@ -89,6 +85,40 @@ body {
     display: none;
 }
 
+/* Navbar Search */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: var(--bg);
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
 /* Hero */
 .hero {
     min-height: 100vh;
@@ -148,17 +178,17 @@ body {
 }
 
 /* About Section */
-.about, .menu, .kontak {
+.about, .menu, .kontak, .produk {
     padding: 8rem 7% 1.4rem;
 }
 
-.about h2, .kontak h2 {
+.about h2, .kontak h2, .produk h2 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 1rem;
 }
 
-.about h2 span, .menu h2 span , .kontak h2 span {
+.about h2 span, .menu h2 span , .kontak h2 span, .produk span {
     color: var(--primary);
 }
 
@@ -199,7 +229,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.menu p, .kontak p {
+.menu p, .kontak p, .produk p{
     text-align: center;
     max-width: 70rem;
     margin: auto;
@@ -231,6 +261,52 @@ body {
 
 .menu .row .menu-card-title {
     margin-top: 1rem auto 0.5rem;
+}
+
+/* Produk */
+.produk .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.produk .produk-card {
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+}
+
+.produk .produk-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.produk .produk-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produk .produk-icons a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.produk .produk-image {
+    padding: 1rem 0;
+}
+
+.produk .produk-image img {
+    height: 25rem;
 }
 
 /* Kontak Person */
@@ -368,6 +444,11 @@ footer .credit a {
 
     .navbar .navbar-nav a:hover::after {
         transform: scaleX(0.2);
+    }
+
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
     }
 
     .about .row {
