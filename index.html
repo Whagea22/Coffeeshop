@@ -30,7 +30,7 @@
 
         <div class="navbar-extra active">
             <a href="#" id="search-button"><i data-feather="search"></i></a>
-            <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+            <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
 
@@ -40,6 +40,27 @@
             <label for="search-box"><i data-feather="search"></i></label>
         </div>
         <!-- Search end -->
+
+        <!-- Shopping card start -->
+        <div class="shopping-cart">
+            <div class="cart-item">
+                <img src="img/produk/produk1.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Produk 1</h3>
+                    <div class="item-price">IDR 30K</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+            <div class="cart-item">
+                <img src="img/produk/produk1.jpg" alt="Produk 1">
+                <div class="item-detail">
+                    <h3>Produk 2</h3>
+                    <div class="item-price">IDR 30K</div>
+                </div>
+                <i data-feather="trash-2" class="remove-item"></i>
+            </div>
+        </div>
+        <!-- Shopping card end -->
     </nav>
     <!-- Navbar end -->
 
@@ -128,7 +149,7 @@
             <div class="produk-card">
                 <div class="produk-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="produk-image">
                     <img src="img/produk/produk1.jpg" alt="Produk1">
@@ -136,19 +157,19 @@
                 <div class="produk-content">
                     <h3>Coffee Beans 1</h3>
                     <div class="produk-stars">
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
                         <i data-feather="star"></i>
                         <i data-feather="star"></i>
                     </div>
-                    <div class="produk-price">IDR 35k <span>IDR 60k</span></div>
+                    <div class="produk-price">IDR 35k <span> IDR 60k </span></div>
                 </div>
             </div>
             <div class="produk-card">
                 <div class="produk-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="produk-image">
                     <img src="img/produk/produk1.jpg" alt="Produk1">
@@ -156,19 +177,19 @@
                 <div class="produk-content">
                     <h3>Coffee Beans 2</h3>
                     <div class="produk-stars">
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
                         <i data-feather="star"></i>
                         <i data-feather="star"></i>
                         <i data-feather="star"></i>
                     </div>
-                    <div class="produk-price">IDR 35k <span>IDR 60k</span></div>
+                    <div class="produk-price">IDR 35k <span> IDR 60k </span></div>
                 </div>
             </div>
             <div class="produk-card">
                 <div class="produk-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
-                    <a href="#"><i data-feather="eye"></i></a>
+                    <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
                 </div>
                 <div class="produk-image">
                     <img src="img/produk/produk1.jpg" alt="Produk1">
@@ -176,13 +197,13 @@
                 <div class="produk-content">
                     <h3>Coffee Beans 3</h3>
                     <div class="produk-stars">
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
-                        <i data-feather="star"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
                         <i data-feather="star"></i>
                     </div>
-                    <div class="produk-price">IDR 35k <span>IDR 60k</span></div>
+                    <div class="produk-price">IDR 35k <span> IDR 60k </span></div>
                 </div>
             </div>
         </div>
@@ -240,9 +261,33 @@
         <div class="credit">
             <p>Created by <a href="">WhageaSaputra</a>. | &copy; 2023</p>
         </div>
-
     </footer>
     <!-- Footer End -->
+
+    <!-- Modal detail start -->
+    <div class="modal" id="item-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="img/produk/produk1.jpg" alt="Produk 1">
+                <div class="produk-content">
+                    <h3>Produk 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem et ratione pariatur animi
+                        maxime praesentium omnis iure minima hgaduifasiaoifhhuififhudiyfsidufhukfhds..</p>
+                    <div class="produk-stars">
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star" class="star-full"></i>
+                        <i data-feather="star"></i>
+                        <i data-feather="star"></i>
+                    </div>
+                    <div class="produk-price">IDR 35k <span> IDR 60k </span></div>
+                    <a href="#"><i data-feather="shopping-cart"></i><span>add to cart</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal detail end -->
 
 
     <script>
